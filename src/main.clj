@@ -8,10 +8,9 @@
   (html
    [:html
     [:body
-     [:h1 "Hello world!"]
-     [:p "This is a simple web page served using http-kit and rendered with Hiccup."]]]))
+     [:h1 {:style {:color "rgb(0, 0, 255)"} } "Hello world!"]]]))
 
-(defn handler [req]
+(defn handler [_req]
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (page)})
